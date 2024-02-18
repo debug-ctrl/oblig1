@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bestill billet</title>
+    <title>oblig1</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
 </head>
 <body>
+<h1>Bestilling av kinobiletter</h1>
 
+<p>
+<table>
+    <tr>
+        <td>Velg film her:
+            <label for="film"></label><select id="film">
+                <option value=""> </option>
+                <option value="Thor">Thor</option>
+                <option value="Tenet">Tenet</option>
+                <option value="Inception">Inception</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<span id="filmerror" class="error"></span>
+
+<form>
+    <label for="antall">Antall:</label>
+    <input type="number" id="antall" oninput="" size="2">
+    <span id="antallerror" class="error"></span>
+
+    <p>
+        <label for="fornavn">Fornavn:</label>
+        <input type="text" oninput id="fornavn">
+        <span id="fornavnerror" class="error"></span>
+    </p>
+
+    <p>
+        <label for="etternavn">Etternavn:</label>
+        <input type="text" id="etternavn">
+        <span id="etternavnerror" class="error"></span>
+    </p>
+
+    <p>
+        <label for="tlfnr">Telefonnr:</label>
+        <input type="text" id="tlfnr">
+        <span id="tlfnrerror" class="error"></span>
+    </p>
+
+    <p>
+        <label for="Epost">Epost:</label>
+        <input type="text" id="Epost">
+        <span id="eposterror" class="error"></span>
+    </p>
+
+    <button type="button" onclick="getbillet()">kjøp billett</button>
+</form>
+
+<div id="kjøpBillet"></div>
+
+<h2>Alle billetter</h2>
+<p><button onclick="slett()">slett alle billetter</button></p>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
